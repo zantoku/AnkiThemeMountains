@@ -1,0 +1,93 @@
+// Front Template:
+
+<div class="frontbg_top">
+	<div class="expression">
+		{{furigana:Expression}}
+	</div>
+</div>
+<div class="frontbg_bottom">
+	<div class="sentence">
+		{{furigana:Sentence}}
+	</div>
+</div>
+
+
+// Styling:
+
+.card {
+	font-family: Noto Sans CJK JP Regular, sans-serif;
+	font-size: 20px;
+	text-align: center;
+	color: black;
+	background: url("bg_mountainsWide.jpg");
+	background-attachment: fixed;
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: repeat;
+}
+
+.frontbg_top {
+	background-color: rgba(24, 173, 161, 0.25);
+	border-radius: 12px 12px 0 0;
+	color: #fff;
+	padding: 1.5em 0 0.5em 0;
+}
+
+.frontbg_bottom {
+	background-color: rgba(84, 143, 141, 0.45);
+	border-radius: 0 0 12px 12px;
+	color: #fff;
+	padding: 1em 1em 1.5em 1em;
+}
+.expression {
+	font-size: 30pt;
+}
+
+.reading {
+	font-size: 12pt;
+}
+
+.sentence {
+	font-size: 12pt;
+	color: #ddd;
+}
+
+.reading + .sentence {
+	padding-top: 1em;
+}
+
+.cloze_highlight {
+	color: #fff;
+	font-weight: bold;
+}
+
+.frontbg_top .meaning {
+	font-size: 18pt;
+}
+
+.meaning {
+	padding: 1em;
+}
+
+
+// Back Template:
+
+<div class="frontbg_top">
+	<div class="expression">
+		{{furigana:Expression}}
+	</div>
+	<div class="reading">
+		{{furigana:Reading}}
+	</div>
+</div>
+<div class="frontbg_bottom">
+	<div class="meaning">
+		{{English}}
+	</div>
+	<div class="sentence">
+		{{furigana:Sentence}}
+	</div>
+	{{#Audio}}<div class="meaning">
+		{{Audio}}
+	</div>{{/Audio}}
+</div>
